@@ -32,3 +32,6 @@ class GithubSkylines(commands.Cog):
         msg = "Your GitHub Sky Line is:\n"
         msg += self.skyline.format(git_username) + f"/{year}"
         await ctx.send(msg)
+
+def setup(bot):
+    bot.add_cog(GithubSkylines)
