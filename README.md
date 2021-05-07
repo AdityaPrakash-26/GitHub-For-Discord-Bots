@@ -6,12 +6,12 @@ unexpected results!
 
 ## Finished Commands:
 
-- Skylines (Get GitHub Skylines on Discord)
+- [Skylines](/cogs/skylines.py)
 
 ## WIP Commands:
 
-- GitHub Cards
-- GitHub Feeds
+- [GitHub Cards](/cogs/cards/main.py)
+- [GitHub Feeds](/cogs/feeds.py)
 
 ## Planned Commands:
 
