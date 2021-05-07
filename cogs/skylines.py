@@ -11,7 +11,7 @@ class GithubSkylines(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.skyline = "https://skyline.github.com/{}"
+        self.skyline = "https://skyline.github.com/{}"  #base url
         self.session = aiohttp.ClientSession()
 
     def cog_unload(self):
