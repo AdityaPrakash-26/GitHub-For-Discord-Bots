@@ -37,7 +37,7 @@ class GitHubCards(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.active_prefix_matchers = {}
-        self.splitter = re.compile(r"[!?().,;:+|&/`\s]")    #special chars
+        self.splitter = re.compile(r"[!?().,;:+|&/`\s]")
         self._ready = asyncio.Event()
         self.http: GitHubAPI = None  # assigned later on
     

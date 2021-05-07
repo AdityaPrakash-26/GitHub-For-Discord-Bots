@@ -20,14 +20,14 @@ class GithubSkylines(commands.Cog):
 
     @commands.command()
     async def githubskyline(self, ctx, git_username: str, year: int):
-        """Get your github skyline for a specified year."""
+        """Get your github skyline for a particular year."""
         await ctx.trigger_typing()
         async with self.session.get(self.skyline.format(git_username)) as session:
             if not session.status == 200:
-                return await ctx.send("Please provide a valid github username.")
+                return await ctx.send("Please enter a valid github username.")
         if not year in [*range(2008, int(dt.now().strftime("%Y"))+1)]:
             return await ctx.send(
-                f"Please provide a valid year, between 2008 and {dt.now().strftime('%Y')}."
+                f"Please enter a valid year, between 2008 and {dt.now().strftime('%Y')}."
             )
         msg = "Your GitHub Sky Line is:\n"
         msg += self.skyline.format(git_username) + f"/{year}"
